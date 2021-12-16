@@ -1,3 +1,5 @@
+package cis285Final;
+
 public class SelectionSort {
 
          /* Selection Sort function */
@@ -6,35 +8,26 @@ public class SelectionSort {
 
         int N = arr.length;
 
-        int i, j, pos, temp;
+        int i, j = 0, pos, temp;
 
-        for (i = 0; i < N; i++)
+        for (i = 0; i < N; i++) {
 
-        {
+            pos = i;
 
-            pos = j;
+            for (j = i+1; j < N; j++) {
 
-            for (j = i+1; j < N-1; j++)
+                if (arr[j] < arr[pos]) {
 
-            {
+                    /* Swap arr[i] and arr[pos] */
 
-                if (arr[j] < arr[pos])
+                    temp = arr[j];
 
-                {
+                    arr[j] = arr[pos];
 
-                    pos = i;
-
+                    arr[pos]= temp;
                 }
 
             }
-
-            /* Swap arr[i] and arr[pos] */
-
-            temp = arr[I];
-
-            arr[i] = arr[pos];
-
-            arr[pos]= temp;
 
         }
 
